@@ -5,9 +5,9 @@ using System.Text;
 
 namespace AuthService.Application.Services;
 
-public static class UuiGenerator
+public static class UuidGenerator
 {
-    private const string Alphabet = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    private const string Alphabet = "1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     public static string GenerateShortUUID()
     {
         using var rng = RandomNumberGenerator.Create();

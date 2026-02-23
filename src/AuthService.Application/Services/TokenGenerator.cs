@@ -18,7 +18,6 @@ public static class TokenGenerator
         using var rng = RandomNumberGenerator.Create();
         var bytes = new byte[length];
         rng.GetBytes(bytes);
-        return Convert.ToBase64String(bytes);
         return Convert.ToBase64String(bytes)
             .Replace("+", "-")
             .Replace("/", "_")

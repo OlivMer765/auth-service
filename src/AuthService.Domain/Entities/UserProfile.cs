@@ -13,9 +13,6 @@ public class UserProfile
     [MaxLength(16)]
     [ForeignKey(nameof(User))]
     public String UserId { get; set; } = string.Empty;
-
-    public string ProfilePictureUrl { get; set; }
-    public string Bio { get; set; }
     public DateTime DateOfBirth { get; set; }
 
     public User Users { get; set; } = null!;

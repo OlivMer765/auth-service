@@ -2,22 +2,23 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AuthService.Domain.Entities
 {
-    public class Role
+public class Role
     {
         [Key]
-        [MaxLength(10)]
-        public int Id { get; set; }
+        [MaxLength(16)]
+        public string Id { get; set; } = string.Empty;
 
-        [Required]
-        [MaxLength(50)]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "El nombre de rol es obligatorio.")]
+        [MaxLength(100, ErrorMessage = "El nombre de rol no pede superar los 100 caracteres")]
+        public string Name { get; set; } = string.Empty;
 
-        [Required]
-        [MaxLength(255)]
-        public string Description { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         //Relaciones con UserRole
-        public ICollection<UserRole> UserRole { get; set; }
+        public ICollection<UserRole> UserRole { get; set; } = [];
 
     }
 }

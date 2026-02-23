@@ -256,6 +256,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Informatica\\Downloads\\Git\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj": {
+                "projectPath": "C:\\Users\\Informatica\\Downloads\\Git\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj"
+              },
               "C:\\Users\\Informatica\\Downloads\\Git\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj": {
                 "projectPath": "C:\\Users\\Informatica\\Downloads\\Git\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj"
               }
