@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[8.0.21, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
             "NetEscapades.AspNetCore.SecurityHeaders": {
               "target": "Package",
               "version": "[1.2.0, )"
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\dotnet-sdk-8.0.418-win-x64\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -141,6 +145,10 @@
               "target": "Package",
               "version": "[12.1.1, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.15.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[10.0.2, )"
@@ -148,6 +156,14 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[10.0.2, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.15.0, )"
             }
           },
           "imports": [
@@ -166,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\dotnet-sdk-8.0.418-win-x64\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -230,7 +246,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\dotnet-sdk-8.0.418-win-x64\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -311,7 +327,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\dotnet-sdk-8.0.418-win-x64\\sdk\\8.0.418/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

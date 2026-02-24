@@ -83,20 +83,34 @@ public class UserRepository(ApplicationDbContext context) : IUserRepository
     {
         context.Users.Add(user);
         await context.SaveChangesAsync();
-        return await GetByIdAsync(user.Id);
+        var createdUser = await GetByIdAsync(user.Id);
+        if (createdUser == null)
+        {
+            throw new InvalidOperationException("No se pudo encontrar el usuario recién creado.");
+        }
+        return createdUser;
     }
 
     // 7. Actualiza la información de un usario existente
     public async Task<User> UpdateAsync(User user)
     {
         await context.SaveChangesAsync();
-        return await GetByIdAsync(user.Id);
+        var updatedUser = await GetByIdAsync(user.Id);
+        if (updatedUser == null)
+        {
+            throw new InvalidOperationException("No se pudo encontrar el usuario actualizado.");
+        }
+        return updatedUser;
     }
 
     // 8. Elimina un usario de la DB por su Id
     public async Task<bool> DeleteAsync(string id)
     {
         var user = await GetByIdAsync(id);
+        if (user == null)
+        {   
+            throw new InvalidOperationException($"User with id {id} not found.");            
+        }
         context.Users.Remove(user);
         await context.SaveChangesAsync();
         return true;
