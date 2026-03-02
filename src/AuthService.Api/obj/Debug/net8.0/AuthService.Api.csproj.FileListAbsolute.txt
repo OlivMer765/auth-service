@@ -173,3 +173,5 @@ C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\obj\Debug\ne
 C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\obj\Debug\net8.0\AuthService.Api.pdb
 C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\obj\Debug\net8.0\AuthService.Api.genruntimeconfig.cache
 C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\obj\Debug\net8.0\ref\AuthService.Api.dll
+C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\bin\Debug\net8.0\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\Informatica\Downloads\Git\auth-service\src\AuthService.Api\bin\Debug\net8.0\Konscious.Security.Cryptography.Blake2.dll

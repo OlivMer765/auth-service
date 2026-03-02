@@ -5,8 +5,7 @@ namespace AuthService.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-
-public class EmailTestController : ControllerBase
+public class EmailTestController : ControllerBase // <--- Asegúrate que diga public
 {
     private readonly IEmailService _emailService;
 
@@ -16,9 +15,9 @@ public class EmailTestController : ControllerBase
     }
 
     [HttpPost("send-welcome")]
-    public async Task<IActionResult> SendWelcomeEmail([FromQuery] string email, [FromQuery] string name)
+    public async Task<IActionResult> TestWelcome(string email, string name)
     {
         await _emailService.SendWelcomeEmailAsync(email, name);
-        return Ok(new { message = $"¡Exito! Correo enviado a {email}" });
+        return Ok(new { message = $"¡Éxito! Correo enviado a {email}" });
     }
 }
