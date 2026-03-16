@@ -10,7 +10,7 @@ public interface IUserRepository
     Task<User?> GetByEmailVerificationTokenAsync(string token);
     Task<User?> GetByPasswordResetTokenAsync(string token);
     Task<bool> ExistsByEmailAsync(string email);
-    Task<bool> ExistByUsernameAsync(string username);
+    Task<bool> ExistsByUsernameAsync(string username);
     Task<User> UpdateAsync(User user);
     Task<bool> DeleteAsync(string id);
     Task UpdateUserRoleAsync(string userId, string roleId);
