@@ -14,6 +14,8 @@ public class UserProfile
     [ForeignKey(nameof(User))]
     public String UserId { get; set; } = string.Empty;
     public DateTime DateOfBirth { get; set; }
+    public string ProfilePicture { get; set; } = string.Empty;
+    public string Phone { get; set; } = string.Empty;
 
     public User Users { get; set; } = null!;
 }

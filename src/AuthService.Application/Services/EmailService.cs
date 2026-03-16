@@ -7,8 +7,6 @@ using AuthService.Application.Interfaces;
 
 namespace AuthService.Application.Services;
 
-//! A que se debe el error en IEmailService?
-// El error en IEmailService se debe a que el método SendEmailVerificationAsync no está implementado en la clase EmailService. Para solucionar esto, debes agregar la implementación de este método en la clase EmailService, similar a como se implementan los otros métodos de envío de correo electrónico.
 public class EmailService(IConfiguration configuration, ILogger<EmailService> logger) : IEmailService
 {
     public async Task SendEmailVerificationAsync(string email, string username, string token)

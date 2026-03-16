@@ -14,7 +14,7 @@ public class RoleRepository(ApplicationDbContext context) : IRoleRepository
             .FirstOrDefaultAsync(r => r.Name == roleName);
     }
 
-    public async Task<int> CountUserInRoleAsync(string roleId)
+    public async Task<int> CountUsersInRoleAsync(string roleId)
     {
         return await context.UserRoles
         .Where(ur => ur.RoleId == roleId)
