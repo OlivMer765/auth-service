@@ -9,7 +9,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddControllers();
+// CONFIGURACIÓN DE SERVICIOS POR MEDIO DE MÉTODOS DE EXTENSIÓ
+builder.Services.AddApplicationServices(builder.Configuration);
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -65,6 +69,30 @@ using (var scope = app.Services.CreateScope())
 }
 // -----------------------------------------------------------------------------------
 
+// Initialize database and seed data
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+
+    try
+    {
+        logger.LogInformation("Checking database connection...");
+
+        // Ensure database is created (similar to Sequelize sync in Node.js)
+        await context.Database.EnsureCreatedAsync();
+
+        logger.LogInformation("Database ready. Running seed data...");
+        await DataSeeder.SeedAsync(context);
+
+        logger.LogInformation("Database initialization completed successfully");
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "An error occurred while initializing the database");
+        throw; // Re-throw to stop the application
+    }
+    }
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
