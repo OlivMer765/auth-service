@@ -33,7 +33,7 @@ services:
       - JwtSettings__SecretKey=clavesecreta123
       - JwtSettings__Issuer=AuthService
       - JwtSettings__Audience=AuthService
-      - JwtSettings__ExpiryInMinutes=30 
+      - JwtSettings__ExpiryInHours=24
     depends_on:
       postgres-db:
         condition: service_healthy
