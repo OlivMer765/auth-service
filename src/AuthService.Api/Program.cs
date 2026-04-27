@@ -178,8 +178,8 @@ using (var scope = app.Services.CreateScope())
     {
         logger.LogInformation("Checking database connection...");
 
-        // Ensure database is created (similar to Sequelize sync in Node.js)
-        await context.Database.EnsureCreatedAsync();
+        // Apply migrations automatically
+        await context.Database.MigrateAsync();
 
         logger.LogInformation("Database ready. Running seed data...");
         await DataSeeder.SeedAsync(context);

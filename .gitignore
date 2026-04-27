@@ -32,8 +32,11 @@ BenchmarkDotNet.Artifacts/
 .env
 .env.*
 !.env.example
-appsettings.Development.json
-appsettings.Local.json
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/appsettings.*.json
+!**/appsettings.json
+**/keys/
 *.pfx
 *.publishsettings
 
@@ -147,3 +150,4 @@ MigrationBackup/
 ~$*
 *~
 *~.*
+
